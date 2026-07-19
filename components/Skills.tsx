@@ -29,6 +29,7 @@ const GROUPS: Group[] = [
       { icon: "JS", color: "#b8860b", name: "JavaScript", desc: "Interactive web" },
       { icon: "Py", color: "#2e6da4", name: "Python", desc: "Scripting & data" },
       { icon: "Jv", color: "#c2410c", name: "Java", desc: "OOP fundamentals" },
+      { icon: "C++", color: "#5f7e9b", name: "C++", desc: "Systems & graphics", size: ".62rem" },
       { icon: "SQL", color: "#3b6fa0", name: "SQL", desc: "Relational queries", size: ".68rem" },
       { icon: "</>", color: "#d9481f", name: "HTML", desc: "Markup & structure", size: ".72rem" },
       { icon: "#", color: "#1572b6", name: "CSS", desc: "Styling & layout" },
@@ -60,6 +61,7 @@ const GROUPS: Group[] = [
       { icon: "Pg", color: "#2f6792", name: "PostgreSQL", desc: "Relational DB" },
       { icon: "Mo", color: "#3fa037", name: "MongoDB", desc: "Document store" },
       { icon: "Fb", color: "#d9902b", name: "Firebase", desc: "Realtime backend" },
+      { icon: "SG", color: "#1a82e2", name: "SendGrid", desc: "Transactional email" },
     ],
   },
   {
@@ -71,6 +73,9 @@ const GROUPS: Group[] = [
       { icon: "VS", color: "#1f7fd1", name: "VS Code", desc: "Editor" },
       { icon: "Az", color: "#1b87d8", name: "Azure", desc: "Cloud services" },
       { icon: "GC", color: "#3c77d9", name: "Google Cloud", desc: "Cloud infra" },
+      { icon: "As", color: "#2ba85f", name: "Android Studio", desc: "Android builds" },
+      { icon: "In", color: "#0f6cbd", name: "Microsoft Intune", desc: "Device management" },
+      { icon: "GL", color: "#5b7fa0", name: "OpenGL", desc: "Graphics (C++)" },
     ],
   },
 ];
