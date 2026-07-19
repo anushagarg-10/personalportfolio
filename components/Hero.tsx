@@ -29,7 +29,6 @@ export default function Hero() {
         </p>
         <div className="hero-meta">
           <span className="pill">📍 Canberra, Australia</span>
-          <span className="pill">✅ Full work rights · 485</span>
           <span className="pill">🎓 M.Computing @ ANU</span>
         </div>
         <div className="cta">

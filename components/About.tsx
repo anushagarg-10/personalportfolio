@@ -43,10 +43,6 @@ export default function About() {
               <span className="v">Next.js · React · TS</span>
             </div>
             <div className="fact">
-              <span className="k">Work rights</span>
-              <span className="v">Subclass 485 · 3 yrs</span>
-            </div>
-            <div className="fact">
               <span className="k">Degree</span>
               <span className="v">M.Computing, ANU</span>
             </div>
