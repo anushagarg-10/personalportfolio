@@ -20,7 +20,51 @@ const VercelMark = (
   </svg>
 );
 
+const ResponsiveMark = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="2" y="4" width="13" height="10" rx="1.5" />
+    <rect x="16" y="8" width="6" height="12" rx="1.5" />
+  </svg>
+);
+
+const ComponentMark = (
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <rect x="3" y="3" width="7.5" height="7.5" rx="1.6" />
+    <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6" />
+    <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6" />
+    <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6" />
+  </svg>
+);
+
+const LayoutMark = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect x="3" y="4" width="18" height="16" rx="2" />
+    <path d="M3 9h18M9 9v11" />
+  </svg>
+);
+
+const SearchMark = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="10.5" cy="10.5" r="6.5" />
+    <path d="M20 20l-4.5-4.5" />
+  </svg>
+);
+
 const GROUPS: Group[] = [
+  {
+    emoji: "🎨",
+    title: "Frontend",
+    items: [
+      { icon: ReactMark, color: "#0ea5c4", name: "React.js", desc: "Component UIs" },
+      { icon: "N", color: "var(--ink)", name: "Next.js", desc: "App Router & SSR" },
+      { icon: "~", color: "#0e9bb8", name: "Tailwind CSS", desc: "Utility-first CSS" },
+      { icon: "M", color: "#1971e6", name: "Material-UI", desc: "Component library" },
+      { icon: ResponsiveMark, color: "#7a6ff0", name: "Responsive Design", desc: "Mobile to desktop" },
+      { icon: ComponentMark, color: "#2e9b6b", name: "Component Architecture", desc: "Reusable systems" },
+      { icon: LayoutMark, color: "#d63c78", name: "UI / UX", desc: "User-centred design" },
+      { icon: SearchMark, color: "#b57a1e", name: "SSR & SEO", desc: "Fast & discoverable" },
+    ],
+  },
   {
     emoji: "💻",
     title: "Languages",
@@ -34,21 +78,6 @@ const GROUPS: Group[] = [
       { icon: "</>", color: "#d9481f", name: "HTML", desc: "Markup & structure", size: ".72rem" },
       { icon: "#", color: "#1572b6", name: "CSS", desc: "Styling & layout" },
     ],
-  },
-  {
-    emoji: "🎨",
-    title: "Frontend",
-    items: [
-      { icon: ReactMark, color: "#0ea5c4", name: "React.js", desc: "Component UIs" },
-      { icon: "N", color: "var(--ink)", name: "Next.js", desc: "App Router & SSR" },
-      { icon: "~", color: "#0e9bb8", name: "Tailwind CSS", desc: "Utility-first CSS" },
-      { icon: "M", color: "#1971e6", name: "Material-UI", desc: "Component library" },
-    ],
-    note: (
-      <>
-        Plus <b>responsive design</b>, <b>component architecture</b>, and <b>UI/UX</b>.
-      </>
-    ),
   },
   {
     emoji: "⚙️",
