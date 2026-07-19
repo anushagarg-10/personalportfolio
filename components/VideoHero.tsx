@@ -1,46 +1,59 @@
-export default function Hero() {
+"use client";
+import { useEffect, useRef } from "react";
+
+export default function VideoHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      v.pause();
+      return;
+    }
+    v.play().catch(() => {});
+  }, []);
+
   return (
-    <section className="hero">
-      <div className="wrap">
-        <div className="badge">
+    <section className="vhero" id="intro">
+      <video
+        ref={videoRef}
+        className="vhero-video"
+        poster="/intro-poster.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src="/intro.mp4" type="video/mp4" />
+      </video>
+      <div className="vhero-scrim" />
+      <div className="wrap vhero-content">
+        <div className="vbadge">
           <span className="dotlive" /> Available for frontend roles · Canberra, AU
         </div>
         <h1>
-          <span className="line">
-            <span>Frontend engineer</span>
-          </span>
-          <span className="line">
-            <span>
-              crafting{" "}
-              <em className="g" style={{ fontStyle: "normal" }}>
-                fast, elegant
-              </em>
-            </span>
-          </span>
-          <span className="line">
-            <span>web experiences.</span>
-          </span>
+          Hi, I&apos;m
+          <br />
+          <span className="g">Anusha Garg</span>.
         </h1>
-        <p className="lead">
-          I&apos;m <b>Anusha Garg</b>, a software engineer living in <b>Next.js</b>,{" "}
-          <b>React</b> &amp; <b>TypeScript</b>. I&apos;ve shipped a live multi-tenant SaaS
-          platform and rebuilt client sites onto modern stacks, obsessing over performance,
-          SEO, and clean component design.
+        <p className="vlead">
+          Frontend engineer crafting fast, elegant web experiences with{" "}
+          <b>Next.js</b>, <b>React</b> &amp; <b>TypeScript</b>.
         </p>
-        <div className="hero-meta">
-          <span className="pill">📍 Canberra, Australia</span>
-          <span className="pill">🎓 M.Computing @ ANU</span>
-        </div>
         <div className="cta">
           <a href="#projects" className="btn btn-p" data-cur data-mag>
             View my work →
           </a>
-          <a href="mailto:anusha.garg.ag@gmail.com" className="btn btn-g" data-cur data-mag>
+          <a href="mailto:anusha.garg.ag@gmail.com" className="btn btn-glass" data-cur data-mag>
             Email me
           </a>
           <div className="socs">
             <a
-              className="ic"
+              className="ic ic-glass"
               data-cur
               href="https://www.linkedin.com/in/anusha-garg-67a214205/"
               target="_blank"
@@ -52,7 +65,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              className="ic"
+              className="ic ic-glass"
               data-cur
               href="mailto:anusha.garg.ag@gmail.com"
               aria-label="Email"
@@ -65,7 +78,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="scrollcue">
+      <div className="scrollcue vhero-cue">
         SCROLL<div className="l" />
       </div>
     </section>

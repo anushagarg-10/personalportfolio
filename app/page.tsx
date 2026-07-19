@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import VideoHero from "@/components/VideoHero";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -10,9 +10,9 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Marquee />
+      <VideoHero />
       <About />
+      <Marquee />
       <Experience />
       <Projects />
       <Skills />
