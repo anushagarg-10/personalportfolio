@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap foot">
-        <p>© {year} Anusha Garg · Designed &amp; built in Canberra.</p>
+        <p>© {year} Anusha Garg</p>
         <div className="socs">
           <a
             className="ic"
