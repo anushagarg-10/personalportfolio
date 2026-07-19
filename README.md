@@ -1,27 +1,42 @@
 # Anusha Garg — Portfolio
 
-A single-page personal portfolio built as one self-contained `index.html` (HTML, CSS, and JavaScript inline). No build step, no dependencies.
+A personal portfolio built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**. The design system lives in `app/globals.css`; the page is split into components under `components/`, with the canvas background, custom cursor, theme toggle, and interactions as client components.
 
 ## Run locally
 
 ```bash
-node server.js
+npm install
+npm run dev
 ```
 
 Then open http://localhost:3000
 
-(You can also just double-click `index.html` to open it directly in a browser.)
+## Scripts
 
-## Files
+- `npm run dev` — start the dev server
+- `npm run build` — production build
+- `npm run start` — serve the production build
+- `npm run lint` — lint
 
-- `index.html` — the entire website
-- `server.js` — a tiny static server for local preview only (not needed for deployment)
+## Structure
+
+```
+app/
+  layout.tsx      root layout: fonts, metadata, global chrome
+  page.tsx        assembles the page sections
+  globals.css     design system (CSS variables + component styles)
+components/
+  Header, Hero, Marquee, About, Experience, Projects,
+  Skills, Background, Contact, Footer   — content sections
+  BackgroundFX, Cursor, Interactions, RaysEgg, ThemeScript  — client behavior
+```
 
 ## Deploy
 
-Only `index.html` is needed to go live. Two easy options:
+Push to a Git host and import into **Vercel** (zero config for Next.js), or run:
 
-- **Netlify Drop:** drag this folder onto https://app.netlify.com/drop
-- **Vercel CLI:** run `npx vercel --prod` from this folder
+```bash
+npx vercel --prod
+```
 
-HTTPS is issued automatically by both. Add a custom domain in the host's dashboard once deployed.
+Add a custom domain in the Vercel dashboard once deployed. HTTPS is automatic.
