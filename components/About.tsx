@@ -16,8 +16,8 @@ export default function About() {
               className="about-photo"
               src="/anusha.jpg"
               alt="Anusha Garg"
-              width={1000}
-              height={1000}
+              width={1080}
+              height={1350}
               sizes="(max-width: 840px) 100vw, 380px"
             />
           </figure>
