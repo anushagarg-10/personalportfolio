@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about">
@@ -29,6 +31,14 @@ export default function About() {
             </p>
           </div>
           <aside className="card rv">
+            <Image
+              className="about-photo"
+              src="/anusha.jpg"
+              alt="Anusha Garg"
+              width={1000}
+              height={1000}
+              sizes="(max-width: 840px) 100vw, 360px"
+            />
             <h3>// at a glance</h3>
             <div className="fact">
               <span className="k">Role</span>
