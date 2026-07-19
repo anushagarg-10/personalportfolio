@@ -28,6 +28,15 @@ const PROJECTS: Project[] = [
     link: { href: "https://www.praisebuilding.com.au/", label: "Visit praisebuilding.com.au ↗" },
   },
   {
+    live: true,
+    cat: "Client project",
+    icon: "🌿",
+    title: "Nature Life Science",
+    desc: "Marketing site for a poultry health supplement brand (part of AVC Nutrition) offering herbal and nutritional formulations. Built in Next.js with a product catalog, modal product views, and structured SEO.",
+    tags: ["Next.js", "SSR", "SEO"],
+    link: { href: "https://naturelifescience.in/", label: "Visit naturelifescience.in ↗" },
+  },
+  {
     icon: "🗺️",
     title: "Human Mobility QA Platform",
     desc: "A React interface for querying and displaying large-scale mobility data, with optimized API communication and data workflows that improved responsiveness and exploration.",

@@ -33,7 +33,7 @@ export default function VideoHero() {
       <div className="vhero-scrim" />
       <div className="wrap vhero-content">
         <div className="vbadge">
-          <span className="dotlive" /> Available for frontend roles · Canberra, AU
+          <span className="dotlive" /> Available for frontend roles
         </div>
         <h1>
           Hi, I&apos;m
