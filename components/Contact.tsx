@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contact">
       <div className="wrap">
         <div className="contact-inner rv">
-          <h2>
+          <h2 className="scramble">
             Let&apos;s build <span className="g">something</span>.
           </h2>
           <p>

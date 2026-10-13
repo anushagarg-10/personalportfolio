@@ -5,42 +5,56 @@ export default function About() {
     <section id="about">
       <div className="wrap">
         <div className="tag rv">01 · About</div>
-        <h2 className="h2 rv">
+        <h2 className="h2 rv scramble">
           A frontend engineer
           <br />
           who sweats the details.
         </h2>
         <div className="about-grid">
           <figure className="about-portrait rv">
+            <div className="blob blob-about" aria-hidden="true" />
             <Image
               className="about-photo"
               src="/anusha.jpg"
               alt="Anusha Garg"
-              width={1080}
-              height={1350}
+              width={4284}
+              height={5712}
               sizes="(max-width: 840px) 100vw, 380px"
             />
           </figure>
           <div className="about-main rv">
             <div className="about-text">
               <p>
-                I build user-facing web apps with <b>Next.js (App Router)</b>, <b>React</b>, and{" "}
-                <b>TypeScript</b>, from dashboards and data-driven interfaces to full production
-                platforms. My work lives where clean UI meets solid engineering: reusable component
-                libraries, server-side rendering, and data fetching tuned for speed and SEO.
+                I build user-facing web apps with <b>Next.js</b>, <b>React</b>, and{" "}
+                <b>TypeScript</b>: wiring up <b>REST APIs</b>, <b>SEO</b>-tuned SSR, and clean UI
+                across client and personal projects. Currently at <b>Empreus IT Support</b> in
+                Canberra, shipping a live multi-tenant SaaS platform for hardware leasing and
+                rebuilding client sites onto modern Next.js stacks. Before that: Web3 interfaces at{" "}
+                <b>BlockConvey</b> and a research platform at <b>UNSW</b>.
               </p>
               <p>
-                Currently at <b>Empreus IT Support</b> in Canberra, where I shipped a live
-                multi-tenant SaaS platform for hardware leasing and rebuilt several client sites from
-                WordPress onto modern Next.js stacks. Before that: Web3 interfaces at{" "}
-                <b>BlockConvey</b> and a full-stack research platform at <b>UNSW</b>.
+                I hold a <b>Master of Computing</b> from ANU, with coursework in computer graphics
+                (ray tracing &amp; path tracing in C++/OpenGL). That&apos;s also why this page opens
+                with a hand-written WebGL scene instead of a stock hero.
               </p>
-              <p>
-                I&apos;m finishing a <b>Master of Computing</b> at ANU, with coursework in computer
-                graphics (ray tracing &amp; path tracing in C++/OpenGL), systems engineering, and
-                algorithms. The graphics side is why this page has a canvas that reacts to your
-                cursor.
-              </p>
+            </div>
+            <div className="stat-strip rv">
+              <div className="stat">
+                <span className="stat-n">2+</span>
+                <span className="stat-l">Years experience</span>
+              </div>
+              <div className="stat">
+                <span className="stat-n">20+</span>
+                <span className="stat-l">Sites live</span>
+              </div>
+              <div className="stat">
+                <span className="stat-n">50+</span>
+                <span className="stat-l">Projects built</span>
+              </div>
+              <div className="stat">
+                <span className="stat-n">M.Comp</span>
+                <span className="stat-l">ANU, completed</span>
+              </div>
             </div>
             <aside className="card">
               <h3>// at a glance</h3>

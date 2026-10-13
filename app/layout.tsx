@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RaysEgg from "@/components/RaysEgg";
 import Interactions from "@/components/Interactions";
+import CommandNav from "@/components/CommandNav";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -62,11 +63,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${grotesk.variable} ${syne.variable} ${mono.variable}`}
     >
-      <body id="top">
+      <body id="top" suppressHydrationWarning>
         <ThemeScript />
         <BackgroundFX />
         <Cursor />
         <RaysEgg />
+        <CommandNav />
         <Header />
         {children}
         <Footer />

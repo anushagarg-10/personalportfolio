@@ -20,3 +20,4 @@ build/
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo

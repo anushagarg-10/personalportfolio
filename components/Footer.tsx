@@ -3,7 +3,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap foot">
-        <p>© {year} Anusha Garg</p>
+        <p>
+          © {year} Anusha Garg <span className="mono foot-v">· v2, redesigned {year}</span>
+        </p>
         <div className="socs">
           <a
             className="ic"

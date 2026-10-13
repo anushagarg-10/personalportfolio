@@ -112,9 +112,10 @@ const GROUPS: Group[] = [
 export default function Skills() {
   return (
     <section id="skills">
+      <div className="blob blob-skills" aria-hidden="true" />
       <div className="wrap">
         <div className="tag rv">04 · Toolkit</div>
-        <h2 className="h2 rv">Tools I work with.</h2>
+        <h2 className="h2 rv scramble">Tools I work with.</h2>
         <p className="sub rv">
           A frontend-leaning full-stack toolkit, weighted toward the modern React ecosystem.
         </p>

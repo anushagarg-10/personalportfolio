@@ -7,10 +7,17 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
   const progRef = useRef<HTMLDivElement>(null);
 
-  // Sync theme state to whatever the pre-hydration script set on <html>.
+  // Sync theme state to whatever the pre-hydration script set on <html>,
+  // and keep it in sync if anything else flips the attribute later.
   useEffect(() => {
-    const t = document.documentElement.getAttribute("data-theme");
-    if (t === "dark" || t === "light") setTheme(t);
+    const sync = () => {
+      const t = document.documentElement.getAttribute("data-theme");
+      if (t === "dark" || t === "light") setTheme(t);
+    };
+    sync();
+    const mo = new MutationObserver(sync);
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => mo.disconnect();
   }, []);
 
   useEffect(() => {
@@ -63,6 +70,19 @@ export default function Header() {
             </a>
           </nav>
           <div className="nav-r">
+            <button
+              className="tbtn gridbtn"
+              onClick={() => window.dispatchEvent(new Event("open-nav"))}
+              data-cur
+              aria-label="Quick navigation (press / or ⌘K)"
+              title="Quick navigation (/ or ⌘K)"
+            >
+              <span className="griddots">
+                <i /><i /><i />
+                <i /><i /><i />
+                <i /><i /><i />
+              </span>
+            </button>
             <button
               className="tbtn"
               onClick={toggle}
