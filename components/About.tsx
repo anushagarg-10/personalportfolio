@@ -6,7 +6,7 @@ export default function About() {
       <div className="wrap">
         <div className="tag rv">01 · About</div>
         <h2 className="h2 rv scramble">
-          A frontend engineer
+          A full-stack engineer
           <br />
           who sweats the details.
         </h2>
@@ -25,19 +25,13 @@ export default function About() {
           <div className="about-main rv">
             <div className="about-text">
               <p>
-                I&apos;m a full-stack software engineer at <b>Empreus IT Support</b> in Canberra, and
-                the only web developer there. I take websites and web apps for <b>30+ client
-                businesses</b> from requirements and design through to deployment and upkeep, using{" "}
-                <b>React</b>, <b>Next.js</b>, <b>TypeScript</b> and <b>Supabase</b>, with{" "}
-                <b>REST APIs</b> and <b>SEO</b> built in. I built a multi-tenant SaaS platform,
-                migrated 10+ sites from WordPress to Next.js, and handle Essential Eight security
-                compliance for clients, including one in defence.
+                Full-stack engineer at <b>Empreus IT Support</b>, and the only web developer there.
+                I take sites for <b>30+ businesses</b> from design to deployment with{" "}
+                <b>Next.js</b>, <b>React</b>, <b>TypeScript</b> and <b>Supabase</b>.
               </p>
               <p>
-                I hold a <b>Master of Computing</b> (Human-Centred and Creative Computing) from ANU,
-                with graphics coursework in ray and path tracing. That&apos;s why I care about
-                design as much as code, and why this page opens with a hand-written WebGL scene
-                instead of a stock hero.
+                <b>Master of Computing</b> (Human-Centred and Creative Computing), ANU. I care about
+                design as much as code, hence the WebGL hero.
               </p>
             </div>
             <div className="stat-strip rv">
@@ -46,8 +40,8 @@ export default function About() {
                 <span className="stat-l">Years experience</span>
               </div>
               <div className="stat">
-                <span className="stat-n">20+</span>
-                <span className="stat-l">Sites live</span>
+                <span className="stat-n">30+</span>
+                <span className="stat-l">Client businesses</span>
               </div>
               <div className="stat">
                 <span className="stat-n">50+</span>

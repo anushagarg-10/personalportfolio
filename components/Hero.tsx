@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="wrap hero3d-grid">
         <div className="hero3d-content">
           <div className="badge">
-            <span className="dotlive" /> Available for frontend roles
+            <span className="dotlive" /> Open to software engineering roles
           </div>
           <h1 ref={nameRef}>
             Hi, I&apos;m
@@ -39,8 +39,8 @@ export default function Hero() {
             <span className="g">Anusha Garg</span>.
           </h1>
           <p className="lead">
-            Frontend engineer crafting fast, elegant web experiences with{" "}
-            <b>Next.js</b>, <b>React</b> &amp; <b>TypeScript</b>.
+            Full-stack software engineer shipping websites and SaaS platforms for 30+ businesses
+            with <b>Next.js</b>, <b>React</b> &amp; <b>TypeScript</b>.
           </p>
           <div className="cta">
             <a href="#projects" className="btn btn-p" data-cur data-mag>
@@ -48,6 +48,16 @@ export default function Hero() {
             </a>
             <a href="mailto:anusha.garg.ag@gmail.com" className="btn btn-g" data-cur data-mag>
               Email me
+            </a>
+            <a
+              href="/Anusha-Garg-Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              className="btn btn-g"
+              data-cur
+              data-mag
+            >
+              Resume ↗
             </a>
             <div className="socs">
               <a
@@ -72,17 +82,6 @@ export default function Hero() {
               >
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0112 6.8c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z" />
-                </svg>
-              </a>
-              <a
-                className="ic"
-                data-cur
-                href="mailto:anusha.garg.ag@gmail.com"
-                aria-label="Email"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
-                  <path d="M3 6l9 6.5L21 6" />
                 </svg>
               </a>
             </div>

@@ -22,22 +22,16 @@ const JOBS: Job[] = [
     color: "var(--v)",
     bullets: [
       <>
-        The only web developer, taking each project end to end for <b>30+ businesses</b>:
-        requirements, design, build in Next.js, React &amp; TypeScript, then deploy on Vercel and
-        maintain.
+        Sole web developer for <b>30+ businesses</b>, from design to deployment.
       </>,
       <>
-        Built <b>Osmia</b>, a multi-tenant B2B SaaS platform, solo over 12+ sprints with Next.js,
-        Supabase, Prisma &amp; PostgreSQL, and rebuilt a failing third-party API integration with
-        retry and backoff.
+        Built <b>Osmia</b>, a multi-tenant SaaS, solo in 12+ sprints.
       </>,
       <>
-        Migrated and redesigned <b>10+ client sites</b> from WordPress to Next.js without losing a
-        page, SEO setting or URL. The ALRTA site is now 50% more efficient to maintain.
+        Migrated <b>10+ sites</b> from WordPress to Next.js, losing no URLs.
       </>,
       <>
-        Support <b>Essential Eight</b> Maturity Level 2 compliance for clients, including a defence
-        industry client, using Intune and Defender, and manage DNS for 314 domains.
+        <b>Essential Eight</b> ML2 for clients, including defence. DNS for 314 domains.
       </>,
     ],
   },
@@ -51,17 +45,10 @@ const JOBS: Job[] = [
     color: "var(--t)",
     bullets: [
       <>
-        Rebuilt the company website from Figma designs with reusable components, so the business
-        can update its own site <b>65% more easily</b>.
+        Rebuilt the company site, now <b>65% easier</b> to update.
       </>,
-      <>
-        Built responsive Web3 frontends connected to backend services through REST APIs on AWS,
-        Azure &amp; Google Cloud.
-      </>,
-      <>
-        Wrote and deployed Ethereum NFT smart contracts using IPFS, and set up a blockchain network
-        on Google Cloud with a disaster recovery plan.
-      </>,
+      <>Web3 frontends and REST APIs on AWS, Azure and Google Cloud.</>,
+      <>Ethereum NFT smart contracts with IPFS.</>,
     ],
   },
   {
@@ -74,12 +61,10 @@ const JOBS: Job[] = [
     color: "var(--p)",
     bullets: [
       <>
-        Built the full-stack <b>Human Mobility QA platform</b> in React, Node.js &amp; MongoDB so
-        researchers could query and trust large, messy datasets.
+        Built the <b>Human Mobility QA</b> platform in React, Node.js and MongoDB.
       </>,
       <>
-        Designed the interface in Figma and built dashboards that saved researchers{" "}
-        <b>30% of their time</b> checking results.
+        Dashboards that saved researchers <b>30% of their time</b>.
       </>,
     ],
   },
@@ -91,9 +76,7 @@ export default function Experience() {
       <div className="wrap">
         <div className="tag rv">02 · Experience</div>
         <h2 className="h2 rv scramble">Where I&apos;ve worked.</h2>
-        <p className="sub rv">
-          Websites, SaaS and security work for small businesses, plus Web3 and research before that.
-        </p>
+        <p className="sub rv">Websites, SaaS and security.</p>
         <div className="timeline">
           {JOBS.map((j) => (
             <div className="job rv" key={j.co}>

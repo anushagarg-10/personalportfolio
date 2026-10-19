@@ -16,9 +16,9 @@ const PROJECTS: Project[] = [
   {
     live: true,
     cat: "Client project",
-    title: "Osmia HaaS Platform",
-    desc: "A production Hardware-as-a-Service platform for Australian MSPs: quote builder, contract management, asset register, and automated monthly invoicing.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Prisma"],
+    title: "Osmia",
+    desc: "Multi-tenant SaaS for hardware leasing, built solo.",
+    tags: ["Next.js", "Supabase", "Prisma", "Stripe"],
     link: { href: "https://www.osmia.au/", label: "osmia.au" },
     image: "/projects/osmia.jpg",
     grad: "linear-gradient(160deg,#241b0a 0%,#4a350f 55%,#6b4816 100%)",
@@ -26,8 +26,18 @@ const PROJECTS: Project[] = [
   {
     live: true,
     cat: "Client project",
+    title: "ALRTA",
+    desc: "National livestock transport body. WordPress to Next.js, no URL lost.",
+    tags: ["Next.js", "Migration", "SEO"],
+    link: { href: "https://alrta.org.au/", label: "alrta.org.au" },
+    image: "/projects/alrta.jpg",
+    grad: "linear-gradient(160deg,#07210f 0%,#0e3b1c 55%,#1c5f2c 100%)",
+  },
+  {
+    live: true,
+    cat: "Client project",
     title: "Praise Building",
-    desc: "Marketing site for a Sydney residential builder specialising in heritage restorations and custom homes, server-rendered with tuned SEO.",
+    desc: "Heritage builder site with architectural line animations.",
     tags: ["Next.js", "SSR", "SEO"],
     link: { href: "https://www.praisebuilding.com.au/", label: "praisebuilding.com.au" },
     image: "/projects/praise-building.jpg",
@@ -37,7 +47,7 @@ const PROJECTS: Project[] = [
     live: true,
     cat: "Client project",
     title: "Nature Life Science",
-    desc: "Marketing site for a poultry health supplement brand (AVC Nutrition) offering herbal and nutritional formulations, with a full product catalog.",
+    desc: "Herbal poultry supplement brand with a full product catalog.",
     tags: ["Next.js", "SSR", "SEO"],
     link: { href: "https://naturelifescience.in/", label: "naturelifescience.in" },
     image: "/projects/nature-life-science.jpg",
@@ -45,8 +55,8 @@ const PROJECTS: Project[] = [
   },
   {
     cat: "Research · UNSW",
-    title: "Human Mobility QA Platform",
-    desc: "A React interface for querying and displaying large-scale mobility data, with optimized API communication and data workflows that improved responsiveness.",
+    title: "Human Mobility QA",
+    desc: "Researchers query and trust large, messy datasets.",
     tags: ["React", "Node.js", "MongoDB"],
     art: "map",
     grad: "linear-gradient(160deg,#191330 0%,#2c2154 55%,#3d2d6e 100%)",
@@ -81,7 +91,7 @@ export default function Projects() {
         <div className="tag rv">03 · Projects</div>
         <h2 className="h2 rv scramble">Things I&apos;ve built.</h2>
         <p className="sub rv">
-          A handful of the ones I can show. Most client work at Empreus and beyond stays under NDA.
+          Client work I can show. The rest is under NDA.
         </p>
 
         <div className="pstack">

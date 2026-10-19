@@ -65,6 +65,9 @@ export default function Header() {
             <a href="#skills" data-cur>
               Skills
             </a>
+            <a href="#background" data-cur>
+              Education
+            </a>
             <a href="#contact" data-cur>
               Contact
             </a>

@@ -7,8 +7,7 @@ export default function Contact() {
             Let&apos;s build <span className="g">something</span>.
           </h2>
           <p>
-            I&apos;m open to frontend engineering roles and interesting collaborations. Email is
-            fastest, and I&apos;d love to hear what you&apos;re working on.
+            Open to software engineering roles. Email is fastest.
           </p>
           <div className="cta">
             <a
@@ -28,6 +27,16 @@ export default function Contact() {
               data-mag
             >
               LinkedIn
+            </a>
+            <a
+              href="/Anusha-Garg-Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              className="btn btn-g"
+              data-cur
+              data-mag
+            >
+              Resume ↗
             </a>
           </div>
         </div>

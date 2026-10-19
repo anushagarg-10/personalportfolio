@@ -33,14 +33,14 @@ const favicon =
   "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>✦</text></svg>";
 
 export const metadata: Metadata = {
-  title: "Anusha Garg · Frontend Engineer",
+  title: "Anusha Garg · Software Engineer",
   description:
-    "Anusha Garg, Frontend Software Engineer crafting fast, elegant web experiences with Next.js, React & TypeScript. Canberra, Australia.",
+    "Anusha Garg, full-stack software engineer in Canberra building websites and SaaS platforms for 30+ businesses with Next.js, React & TypeScript.",
   authors: [{ name: "Anusha Garg" }],
   openGraph: {
-    title: "Anusha Garg · Frontend Engineer",
+    title: "Anusha Garg · Software Engineer",
     description:
-      "Frontend engineer building fast, elegant web experiences with Next.js, React & TypeScript.",
+      "Full-stack software engineer building websites and SaaS platforms with Next.js, React & TypeScript.",
     type: "website",
   },
   icons: { icon: favicon },

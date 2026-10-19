@@ -7,6 +7,8 @@ const ITEMS = [
   "Prisma",
   "Node.js",
   "PostgreSQL",
+  "Vercel",
+  "Essential Eight",
 ];
 
 export default function Marquee() {

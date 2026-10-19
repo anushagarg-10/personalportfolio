@@ -179,9 +179,13 @@ export default function HeroScene() {
     });
     scene.add(fragGroup);
 
+    // On wide screens, park the scene behind the video card (right column) so
+    // it never sits behind the headline and intro copy on the left.
+    let offsetX = 0;
     function fitCamera() {
       const w = mount!.clientWidth || 1;
       const h = mount!.clientHeight || 1;
+      offsetX = w > 900 ? 1.75 : 0;
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h, false);
@@ -247,6 +251,7 @@ export default function HeroScene() {
 
       core.rotation.x += (targetRot.x - core.rotation.x) * 0.04 + burst * 0.02;
       core.rotation.y += (targetRot.y - core.rotation.y + t * 0.05 - core.rotation.y * 0) * 0.04 + burst * 0.03;
+      core.position.x = offsetX;
       core.position.y = scrollT * -1.4;
       core.scale.setScalar(1 + scrollT * 0.35 + burst * 0.22);
 
@@ -262,6 +267,7 @@ export default function HeroScene() {
         f.mesh.rotation.x = a * 0.8 + burst * 2;
         f.mesh.rotation.y = a * 0.6 + burst * 2;
       });
+      fragGroup.position.x = offsetX;
       fragGroup.position.y = scrollT * -1.8;
       fragGroup.rotation.y = t * 0.05;
 

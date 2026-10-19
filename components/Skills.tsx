@@ -123,7 +123,7 @@ export default function Skills() {
         <div className="tag rv">04 · Toolkit</div>
         <h2 className="h2 rv scramble">Tools I work with.</h2>
         <p className="sub rv">
-          A frontend-leaning full-stack toolkit, weighted toward the modern React ecosystem.
+          What I reach for.
         </p>
         <div className="skills">
           {GROUPS.map((g) => (

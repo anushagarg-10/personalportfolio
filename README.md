@@ -20,10 +20,10 @@ Then open http://localhost:3000
 
 ## Scripts
 
-- `npm run dev` — start the dev server
-- `npm run build` — production build
-- `npm run start` — serve the production build
-- `npm run lint` — lint
+- `npm run dev` - start the dev server
+- `npm run build` - production build
+- `npm run start` - serve the production build
+- `npm run lint` - lint
 
 ## Structure
 
@@ -33,7 +33,7 @@ app/
   page.tsx        assembles the page sections
   globals.css     design system (CSS variables + component styles)
 components/
-  Header, Hero, Marquee, About, Experience, Projects,
+  Header, Hero, Highlights, Marquee, About, Experience, Projects,
   Skills, Background, Contact, Footer     content sections
   BackgroundFX, Cursor, Interactions,
   RaysEgg, ThemeScript, CommandNav        client behavior

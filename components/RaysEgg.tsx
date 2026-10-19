@@ -57,7 +57,7 @@ export default function RaysEgg() {
     <button
       className="egg"
       onClick={onClick}
-      aria-label="Trace some rays — click for a spark"
+      aria-label="Trace some rays - click for a spark"
     >
       <span className="spark">✦</span>trace rays
       <span className="egg-c">{count.toLocaleString()}</span>
