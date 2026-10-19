@@ -20,7 +20,7 @@ export default function Contact() {
               anusha.garg.ag@gmail.com
             </a>
             <a
-              href="https://www.linkedin.com/in/anusha-garg-67a214205/"
+              href="https://www.linkedin.com/in/anushagargg/"
               target="_blank"
               rel="noopener"
               className="btn btn-g"

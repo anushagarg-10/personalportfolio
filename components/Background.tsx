@@ -10,7 +10,7 @@ export default function Background() {
             <div className="eitem">
               <h4>Master of Computing</h4>
               <div className="s">Australian National University</div>
-              <div className="m">2024 to Jun 2026 · Canberra</div>
+              <div className="m">Jul 2024 to Jul 2026 · Canberra</div>
               <p>
                 Human-Centred &amp; Creative Computing. Coursework: Computer Graphics
                 (rasterization, ray tracing, Monte Carlo path tracing in C++/OpenGL), Systems
@@ -20,7 +20,7 @@ export default function Background() {
             <div className="eitem">
               <h4>B.Tech, Information Technology</h4>
               <div className="s">Vellore Institute of Technology</div>
-              <div className="m">2020 to 2024 · Vellore, India</div>
+              <div className="m">Sep 2020 to Jun 2024 · Vellore, India · GPA 8.48/10</div>
             </div>
           </div>
           <div className="card rv">

@@ -63,6 +63,7 @@ const GROUPS: Group[] = [
       { icon: ComponentMark, color: "#2e9b6b", name: "Component Architecture", desc: "Reusable systems" },
       { icon: LayoutMark, color: "#d63c78", name: "UI / UX", desc: "User-centred design" },
       { icon: SearchMark, color: "#b57a1e", name: "SSR & SEO", desc: "Fast & discoverable" },
+      { icon: "3D", color: "#8b7bff", name: "WebGL", desc: "Three.js scenes", size: ".7rem" },
     ],
   },
   {
@@ -91,6 +92,8 @@ const GROUPS: Group[] = [
       { icon: "Mo", color: "#3fa037", name: "MongoDB", desc: "Document store" },
       { icon: "Fb", color: "#d9902b", name: "Firebase", desc: "Realtime backend" },
       { icon: "SG", color: "#1a82e2", name: "SendGrid", desc: "Transactional email" },
+      { icon: "St", color: "#635bff", name: "Stripe", desc: "Payment flows" },
+      { icon: "Ka", color: "#d9481f", name: "Kaseya API", desc: "Retry & backoff sync" },
     ],
   },
   {
@@ -105,6 +108,9 @@ const GROUPS: Group[] = [
       { icon: "As", color: "#2ba85f", name: "Android Studio", desc: "Android builds" },
       { icon: "In", color: "#0f6cbd", name: "Microsoft Intune", desc: "Device management" },
       { icon: "GL", color: "#5b7fa0", name: "OpenGL", desc: "Graphics (C++)" },
+      { icon: "Vt", color: "#3c8b3c", name: "Vitest", desc: "Tests & CI/CD" },
+      { icon: "E8", color: "#d63c78", name: "Essential Eight", desc: "ML2 security compliance", size: ".72rem" },
+      { icon: "Df", color: "#1b87d8", name: "Defender", desc: "Endpoint security" },
     ],
   },
 ];

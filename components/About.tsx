@@ -25,17 +25,19 @@ export default function About() {
           <div className="about-main rv">
             <div className="about-text">
               <p>
-                I build user-facing web apps with <b>Next.js</b>, <b>React</b>, and{" "}
-                <b>TypeScript</b>: wiring up <b>REST APIs</b>, <b>SEO</b>-tuned SSR, and clean UI
-                across client and personal projects. Currently at <b>Empreus IT Support</b> in
-                Canberra, shipping a live multi-tenant SaaS platform for hardware leasing and
-                rebuilding client sites onto modern Next.js stacks. Before that: Web3 interfaces at{" "}
-                <b>BlockConvey</b> and a research platform at <b>UNSW</b>.
+                I&apos;m a full-stack software engineer at <b>Empreus IT Support</b> in Canberra, and
+                the only web developer there. I take websites and web apps for <b>30+ client
+                businesses</b> from requirements and design through to deployment and upkeep, using{" "}
+                <b>React</b>, <b>Next.js</b>, <b>TypeScript</b> and <b>Supabase</b>, with{" "}
+                <b>REST APIs</b> and <b>SEO</b> built in. I built a multi-tenant SaaS platform,
+                migrated 10+ sites from WordPress to Next.js, and handle Essential Eight security
+                compliance for clients, including one in defence.
               </p>
               <p>
-                I hold a <b>Master of Computing</b> from ANU, with coursework in computer graphics
-                (ray tracing &amp; path tracing in C++/OpenGL). That&apos;s also why this page opens
-                with a hand-written WebGL scene instead of a stock hero.
+                I hold a <b>Master of Computing</b> (Human-Centred and Creative Computing) from ANU,
+                with graphics coursework in ray and path tracing. That&apos;s why I care about
+                design as much as code, and why this page opens with a hand-written WebGL scene
+                instead of a stock hero.
               </p>
             </div>
             <div className="stat-strip rv">
@@ -61,7 +63,7 @@ export default function About() {
               <div className="facts-grid">
                 <div className="fact">
                   <span className="k">Role</span>
-                  <span className="v">Frontend Engineer</span>
+                  <span className="v">Software Engineer</span>
                 </div>
                 <div className="fact">
                   <span className="k">Location</span>
