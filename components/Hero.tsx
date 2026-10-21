@@ -88,9 +88,8 @@ export default function Hero() {
               Email me
             </a>
             <a
-              href="/Anusha-Garg-Resume.pdf"
-              target="_blank"
-              rel="noopener"
+              href="/Anusha_Garg_CV.pdf"
+              download="Anusha_Garg_CV.pdf"
               className="btn btn-g"
               data-cur
               data-mag
