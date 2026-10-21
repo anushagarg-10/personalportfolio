@@ -34,25 +34,42 @@ const JOBS: Job[] = [
   },
   {
     n: "02",
-    when: "Jul 2025 to Jul 2026",
+    when: "Jan 2026 to Jul 2026",
     place: "Canberra, AU",
-    role: "Technical Intern / Software Engineer",
+    role: "Software Engineer (part-time)",
     co: "Empreus IT Support",
-    stat: "Intern to full-time",
+    stat: "70 to 80% more reliable sync",
     color: "var(--v)",
     bullets: [
       <>
         Built <b>Osmia</b>, a multi-tenant SaaS, solo in 12+ sprints.
       </>,
       <>
+        Made the Kaseya API sync <b>70 to 80% more reliable</b>.
+      </>,
+      <>
         Shipped the <b>ALRTA</b> migration and a <b>30+ component</b> React UI library.
       </>,
-      <>Stripe payment flow, and a retry-and-backoff fix for a failing API integration.</>,
     ],
   },
   {
     n: "03",
-    when: "May 2023 to Jun 2024",
+    when: "Jul 2025 to Dec 2025",
+    place: "Canberra, AU",
+    role: "Technical Intern",
+    co: "Empreus IT Support",
+    stat: "Intern to full-time",
+    color: "var(--v)",
+    bullets: [
+      <>
+        Intune policies for <b>Essential Eight ML2</b>, for a defence client under DISP.
+      </>,
+      <>Fixed MDM enrolment issues and rolled out the monitoring agent to client devices.</>,
+    ],
+  },
+  {
+    n: "04",
+    when: "Jun 2023 to Jun 2024",
     place: "Remote",
     role: "Product Development Engineer",
     co: "BlockConvey",
@@ -67,8 +84,8 @@ const JOBS: Job[] = [
     ],
   },
   {
-    n: "04",
-    when: "May 2023 to Sep 2023",
+    n: "05",
+    when: "May 2023 to Aug 2023",
     place: "Sydney, AU",
     role: "Research & Development Intern",
     co: "University of New South Wales",
@@ -89,19 +106,19 @@ const DESIGN_ROLES = [
   {
     role: "Designer in Residence",
     org: "10kdesigners",
-    when: "2022 to 2023",
+    when: "Jul 2022 to Nov 2023",
     text: "User-centred design practice.",
   },
   {
     role: "UI/UX Designer",
     org: "miurac",
-    when: "2022",
+    when: "May to Aug 2022",
     text: "Web and mobile UI, wireframes, prototypes, usability tests.",
   },
   {
     role: "UI/UX Designer",
     org: "Procial",
-    when: "2021",
+    when: "Jun to Jul 2021",
     text: "dApp flows and hi-fi prototypes.",
   },
 ];
@@ -115,7 +132,7 @@ export default function Experience() {
         <p className="sub rv">Websites, SaaS and security.</p>
         <div className="timeline" data-sp="line">
           {JOBS.map((j) => (
-            <div className="job rv" key={j.co}>
+            <div className="job rv" key={j.n}>
               <div className="jwhen">
                 <span className="jnum">{j.n}</span>
                 {j.when}
