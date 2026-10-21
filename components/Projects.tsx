@@ -42,6 +42,7 @@ const PROJECTS: Project[] = [
     desc: "Heritage builder site with architectural line animations.",
     tags: ["Next.js", "SSR", "SEO"],
     link: { href: "https://www.praisebuilding.com.au/", label: "praisebuilding.com.au" },
+    caseStudy: "https://praisebuildingcasestudy.netlify.app/",
     image: "/projects/praise-building.jpg",
     grad: "linear-gradient(160deg,#14110c 0%,#241d15 55%,#372a19 100%)",
   },
