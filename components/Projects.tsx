@@ -53,6 +53,7 @@ const PROJECTS: Project[] = [
     desc: "Herbal poultry supplement brand with a full product catalog.",
     tags: ["Next.js", "SSR", "SEO"],
     link: { href: "https://naturelifescience.in/", label: "naturelifescience.in" },
+    caseStudy: "https://naturelifescicasestudy.netlify.app/",
     image: "/projects/nature-life-science.jpg",
     grad: "linear-gradient(160deg,#0c1710 0%,#16281b 55%,#204427 100%)",
   },
