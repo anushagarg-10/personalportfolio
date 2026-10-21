@@ -14,18 +14,15 @@ type Job = {
 const JOBS: Job[] = [
   {
     n: "01",
-    when: "Jul 2025 to Present",
+    when: "Jul 2026 to Present",
     place: "Canberra, AU",
     role: "Software Engineer",
     co: "Empreus IT Support",
-    stat: "Intern to full-time",
+    stat: "Sole web developer",
     color: "var(--v)",
     bullets: [
       <>
         Sole web developer for <b>30+ businesses</b>, from design to deployment.
-      </>,
-      <>
-        Built <b>Osmia</b>, a multi-tenant SaaS, solo in 12+ sprints.
       </>,
       <>
         Migrated <b>10+ sites</b> from WordPress to Next.js, losing no URLs.
@@ -37,6 +34,24 @@ const JOBS: Job[] = [
   },
   {
     n: "02",
+    when: "Jul 2025 to Jul 2026",
+    place: "Canberra, AU",
+    role: "Technical Intern / Software Engineer",
+    co: "Empreus IT Support",
+    stat: "Intern to full-time",
+    color: "var(--v)",
+    bullets: [
+      <>
+        Built <b>Osmia</b>, a multi-tenant SaaS, solo in 12+ sprints.
+      </>,
+      <>
+        Shipped the <b>ALRTA</b> migration and a <b>30+ component</b> React UI library.
+      </>,
+      <>Stripe payment flow, and a retry-and-backoff fix for a failing API integration.</>,
+    ],
+  },
+  {
+    n: "03",
     when: "May 2023 to Jun 2024",
     place: "Remote",
     role: "Product Development Engineer",
@@ -52,7 +67,7 @@ const JOBS: Job[] = [
     ],
   },
   {
-    n: "03",
+    n: "04",
     when: "May 2023 to Sep 2023",
     place: "Sydney, AU",
     role: "Research & Development Intern",
