@@ -7,6 +7,7 @@ type Project = {
   live?: boolean;
   cat: string;
   link?: { href: string; label: string };
+  caseStudy?: string;
   image?: string;
   art?: "map";
   grad: string;
@@ -27,9 +28,10 @@ const PROJECTS: Project[] = [
     live: true,
     cat: "Client project",
     title: "ALRTA",
-    desc: "National livestock transport body. WordPress to Next.js, no URL lost.",
+    desc: "WordPress to Next.js. 89% lighter homepage, zero downtime.",
     tags: ["Next.js", "Migration", "SEO"],
     link: { href: "https://alrta.org.au/", label: "alrta.org.au" },
+    caseStudy: "https://alrtacasestudy.netlify.app/",
     image: "/projects/alrta.jpg",
     grad: "linear-gradient(160deg,#07210f 0%,#0e3b1c 55%,#1c5f2c 100%)",
   },
@@ -156,10 +158,19 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    {p.link && (
-                      <a className="plink" data-cur href={p.link.href} target="_blank" rel="noopener">
-                        Visit {p.link.label} ↗
-                      </a>
+                    {(p.caseStudy || p.link) && (
+                      <div className="pcard-links">
+                        {p.caseStudy && (
+                          <a className="plink plink-cs" data-cur href={p.caseStudy} target="_blank" rel="noopener">
+                            Read the case study ↗
+                          </a>
+                        )}
+                        {p.link && (
+                          <a className="plink" data-cur href={p.link.href} target="_blank" rel="noopener">
+                            Visit {p.link.label} ↗
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                 </div>

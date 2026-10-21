@@ -238,6 +238,9 @@ section{padding:120px 0;position:relative}
 .pcard-info p{color:var(--ink2);font-size:.98rem;line-height:1.6;margin-bottom:18px}
 .pcard-meta{display:flex;flex-direction:column;align-items:center;gap:14px}
 .pcard-meta .tags{justify-content:center}
+.pcard-links{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 22px}
+.plink-cs{padding:9px 16px;border-radius:999px;color:#08080e;background:var(--grad);box-shadow:0 10px 26px -12px var(--glow)}
+.plink-cs:hover{color:#08080e;gap:12px}
 @media(max-width:720px){
   .pcard-visual{min-height:380px;padding:40px 20px;border-radius:24px}
   .pframe{width:82%}
