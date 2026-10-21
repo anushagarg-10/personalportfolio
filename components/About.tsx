@@ -5,10 +5,10 @@ export default function About() {
     <section id="about">
       <div className="wrap">
         <div className="tag rv">01 · About</div>
-        <h2 className="h2 rv scramble">
-          A full-stack engineer
+        <h2 className="h2 rv split">
+          Designer&apos;s <em>eye</em>.
           <br />
-          who sweats the details.
+          Engineer&apos;s <em>discipline</em>.
         </h2>
         <div className="about-grid">
           <figure className="about-portrait rv">
@@ -24,12 +24,12 @@ export default function About() {
           </figure>
           <div className="about-main rv">
             <div className="about-text">
-              <p>
-                Full-stack engineer at <b>Empreus IT Support</b>, and the only web developer there.
-                I take sites for <b>30+ businesses</b> from design to deployment with{" "}
+              <p className="fill">
+                UI/UX designer and full-stack engineer. At <b>Empreus IT Support</b> I&apos;m the only
+                web developer, taking sites for <b>30+ businesses</b> from design to deployment with{" "}
                 <b>Next.js</b>, <b>React</b>, <b>TypeScript</b> and <b>Supabase</b>.
               </p>
-              <p>
+              <p className="fill">
                 <b>Master of Computing</b> (Human-Centred and Creative Computing), ANU. I care about
                 design as much as code, hence the WebGL hero.
               </p>
@@ -57,11 +57,11 @@ export default function About() {
               <div className="facts-grid">
                 <div className="fact">
                   <span className="k">Role</span>
-                  <span className="v">Software Engineer</span>
+                  <span className="v">UI/UX · Full-stack</span>
                 </div>
                 <div className="fact">
                   <span className="k">Location</span>
-                  <span className="v">Canberra, AU</span>
+                  <span className="v">Canberra · open to relocate</span>
                 </div>
                 <div className="fact">
                   <span className="k">Stack</span>

@@ -3,11 +3,11 @@ export default function Contact() {
     <section id="contact">
       <div className="wrap">
         <div className="contact-inner rv">
-          <h2 className="scramble">
+          <h2 className="split">
             Let&apos;s build <span className="g">something</span>.
           </h2>
           <p>
-            Open to software engineering roles. Email is fastest.
+            Open to UI/UX, software engineering and full-stack roles. Email is fastest.
           </p>
           <div className="cta">
             <a

@@ -1,5 +1,7 @@
 const ITEMS = [
+  "Figma",
   "Next.js",
+  "Design systems",
   "React",
   "TypeScript",
   "Tailwind CSS",

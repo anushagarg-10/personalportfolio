@@ -62,6 +62,9 @@ export default function Header() {
             <a href="#projects" data-cur>
               Projects
             </a>
+            <a href="#design" data-cur>
+              Design
+            </a>
             <a href="#skills" data-cur>
               Skills
             </a>

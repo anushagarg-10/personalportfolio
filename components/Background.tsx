@@ -2,8 +2,8 @@ export default function Background() {
   return (
     <section id="background">
       <div className="wrap">
-        <div className="tag rv">05 · Background</div>
-        <h2 className="h2 rv">Education &amp; leadership.</h2>
+        <div className="tag rv">06 · Background</div>
+        <h2 className="h2 rv split">Education &amp; <em>leadership</em>.</h2>
         <div className="two">
           <div className="card rv">
             <div className="panel-h">Education</div>

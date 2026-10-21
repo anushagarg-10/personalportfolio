@@ -98,8 +98,8 @@ const FRAG = /* glsl */ `
 `;
 
 const THEME = {
-  dark: { a: 0x8b7bff, b: 0x4fe0c6, c: 0xffcf5c },
-  light: { a: 0x5b46e0, b: 0x0f8f79, c: 0xb57a1e },
+  dark: { a: 0xff5c9d, b: 0xc77dff, c: 0xffeef6 },
+  light: { a: 0xe0508f, b: 0xf7a8c9, c: 0xfff1f7 },
 };
 
 export default function HeroScene() {

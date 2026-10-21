@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type Skill = { icon: ReactNode; color: string; name: string; desc: string; size?: string };
-type Group = { emoji: string; title: string; items: Skill[]; note?: ReactNode };
+type Group = { id: string; emoji: string; title: string; items: Skill[]; note?: ReactNode };
 
 const ReactMark = (
   <svg viewBox="-11 -11 22 22" fill="none">
@@ -52,7 +52,8 @@ const SearchMark = (
 
 const GROUPS: Group[] = [
   {
-    emoji: "🎨",
+    id: "frontend",
+    emoji: "01",
     title: "Frontend",
     items: [
       { icon: ReactMark, color: "#0ea5c4", name: "React.js", desc: "Component UIs" },
@@ -67,7 +68,8 @@ const GROUPS: Group[] = [
     ],
   },
   {
-    emoji: "💻",
+    id: "languages",
+    emoji: "02",
     title: "Languages",
     items: [
       { icon: "TS", color: "#3178C6", name: "TypeScript", desc: "Type-safe development" },
@@ -81,7 +83,8 @@ const GROUPS: Group[] = [
     ],
   },
   {
-    emoji: "⚙️",
+    id: "backend",
+    emoji: "03",
     title: "Backend & Data",
     items: [
       { icon: "Nd", color: "#3c8b3c", name: "Node.js", desc: "Server-side JS" },
@@ -90,6 +93,7 @@ const GROUPS: Group[] = [
       { icon: "Pr", color: "var(--ink)", name: "Prisma", desc: "Type-safe ORM" },
       { icon: "Pg", color: "#2f6792", name: "PostgreSQL", desc: "Relational DB" },
       { icon: "Mo", color: "#3fa037", name: "MongoDB", desc: "Document store" },
+      { icon: "My", color: "#00758f", name: "MySQL", desc: "Relational DB" },
       { icon: "Fb", color: "#d9902b", name: "Firebase", desc: "Realtime backend" },
       { icon: "SG", color: "#1a82e2", name: "SendGrid", desc: "Transactional email" },
       { icon: "St", color: "#635bff", name: "Stripe", desc: "Payment flows" },
@@ -97,7 +101,8 @@ const GROUPS: Group[] = [
     ],
   },
   {
-    emoji: "🛠️",
+    id: "tools",
+    emoji: "04",
     title: "Tools & Platforms",
     items: [
       { icon: "git", color: "#e44c30", name: "Git", desc: "Version control", size: ".66rem" },
@@ -106,11 +111,36 @@ const GROUPS: Group[] = [
       { icon: "Az", color: "#1b87d8", name: "Azure", desc: "Cloud services" },
       { icon: "GC", color: "#3c77d9", name: "Google Cloud", desc: "Cloud infra" },
       { icon: "As", color: "#2ba85f", name: "Android Studio", desc: "Android builds" },
-      { icon: "In", color: "#0f6cbd", name: "Microsoft Intune", desc: "Device management" },
       { icon: "GL", color: "#5b7fa0", name: "OpenGL", desc: "Graphics (C++)" },
-      { icon: "Vt", color: "#3c8b3c", name: "Vitest", desc: "Tests & CI/CD" },
-      { icon: "E8", color: "#d63c78", name: "Essential Eight", desc: "ML2 security compliance", size: ".72rem" },
+      { icon: "Wp", color: "#21759b", name: "WordPress", desc: "CMS & migrations" },
+      { icon: "GS", color: "#4285f4", name: "Search Console", desc: "SEO reporting" },
+      { icon: "AI", color: "#d97757", name: "Claude Code & Copilot", desc: "Daily, always reviewed", size: ".72rem" },
+    ],
+  },
+  {
+    id: "delivery",
+    emoji: "05",
+    title: "Security & Delivery",
+    items: [
+      { icon: "E8", color: "#d63c78", name: "Essential Eight", desc: "ML2 compliance", size: ".72rem" },
+      { icon: "In", color: "#0f6cbd", name: "Microsoft Intune", desc: "Device management" },
       { icon: "Df", color: "#1b87d8", name: "Defender", desc: "Endpoint security" },
+      { icon: "Vt", color: "#3c8b3c", name: "Vitest", desc: "Tests & CI/CD" },
+      { icon: "GA", color: "#2088ff", name: "GitHub Actions", desc: "CI/CD pipelines" },
+      { icon: "En", color: "#0078d4", name: "Entra ID", desc: "Identity & access" },
+    ],
+  },
+  {
+    id: "design",
+    emoji: "06",
+    title: "Design",
+    items: [
+      { icon: "Fg", color: "#a259ff", name: "Figma", desc: "Interfaces & prototypes" },
+      { icon: "Ai", color: "#ff7a1a", name: "Adobe Creative Suite", desc: "Visual design" },
+      { icon: ComponentMark, color: "#2e9b6b", name: "Design Systems", desc: "Tokens & libraries" },
+      { icon: LayoutMark, color: "#d63c78", name: "UI / UX", desc: "Wireframes to hi-fi" },
+      { icon: "Px", color: "#8b7bff", name: "Prototyping", desc: "Flows & interactions" },
+      { icon: "Rs", color: "#0f8f79", name: "Usability Testing", desc: "Research-led design" },
     ],
   },
 ];
@@ -120,20 +150,22 @@ export default function Skills() {
     <section id="skills">
       <div className="blob blob-skills" aria-hidden="true" />
       <div className="wrap">
-        <div className="tag rv">04 · Toolkit</div>
-        <h2 className="h2 rv scramble">Tools I work with.</h2>
-        <p className="sub rv">
-          What I reach for.
-        </p>
+        <div className="tag rv">05 · Toolkit</div>
+        <h2 className="h2 rv split">Tools I <em>work with</em>.</h2>
+        <p className="sub rv">What I reach for.</p>
         <div className="skills">
           {GROUPS.map((g) => (
-            <div className="sk rv" key={g.title}>
+            <div className={`sk sk-${g.id} rv`} key={g.title}>
               <h3>
                 <span>{g.emoji}</span> {g.title}
               </h3>
               <div className="stkgrid">
-                {g.items.map((it) => (
-                  <div className="stk" key={it.name}>
+                {g.items.map((it, ii) => (
+                  <div
+                    className="stk"
+                    key={it.name}
+                    style={{ ["--i" as string]: ii } as CSSProperties}
+                  >
                     <span
                       className="stk-i"
                       style={{ color: it.color, ...(it.size ? { fontSize: it.size } : {}) }}

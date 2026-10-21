@@ -4,18 +4,15 @@ type Project = {
   title: string;
   desc: string;
   tags: string[];
-  live?: boolean;
   cat: string;
-  link?: { href: string; label: string };
+  link: { href: string; label: string };
   caseStudy?: string;
-  image?: string;
-  art?: "map";
+  image: string;
   grad: string;
 };
 
 const PROJECTS: Project[] = [
   {
-    live: true,
     cat: "Client project",
     title: "Osmia",
     desc: "Multi-tenant SaaS for hardware leasing, built solo.",
@@ -25,7 +22,6 @@ const PROJECTS: Project[] = [
     grad: "linear-gradient(160deg,#241b0a 0%,#4a350f 55%,#6b4816 100%)",
   },
   {
-    live: true,
     cat: "Client project",
     title: "ALRTA",
     desc: "WordPress to Next.js. 89% lighter homepage, zero downtime.",
@@ -36,7 +32,6 @@ const PROJECTS: Project[] = [
     grad: "linear-gradient(160deg,#07210f 0%,#0e3b1c 55%,#1c5f2c 100%)",
   },
   {
-    live: true,
     cat: "Client project",
     title: "Praise Building",
     desc: "Heritage builder site with architectural line animations.",
@@ -47,7 +42,6 @@ const PROJECTS: Project[] = [
     grad: "linear-gradient(160deg,#14110c 0%,#241d15 55%,#372a19 100%)",
   },
   {
-    live: true,
     cat: "Client project",
     title: "Nature Life Science",
     desc: "Herbal poultry supplement brand with a full product catalog.",
@@ -57,15 +51,9 @@ const PROJECTS: Project[] = [
     image: "/projects/nature-life-science.jpg",
     grad: "linear-gradient(160deg,#0c1710 0%,#16281b 55%,#204427 100%)",
   },
-  {
-    cat: "Research · UNSW",
-    title: "Human Mobility QA",
-    desc: "Researchers query and trust large, messy datasets.",
-    tags: ["React", "Node.js", "MongoDB"],
-    art: "map",
-    grad: "linear-gradient(160deg,#191330 0%,#2c2154 55%,#3d2d6e 100%)",
-  },
 ];
+
+const CASE_COUNT = PROJECTS.filter((p) => p.caseStudy).length;
 
 function BrowserFrame({ image, title, layer }: { image: string; title: string; layer: "bg" | "fg" }) {
   return (
@@ -93,62 +81,43 @@ export default function Projects() {
     <section id="projects">
       <div className="wrap">
         <div className="tag rv">03 · Projects</div>
-        <h2 className="h2 rv scramble">Things I&apos;ve built.</h2>
+        <h2 className="h2 rv split">Things I&apos;ve <em>built</em>.</h2>
         <p className="sub rv">
-          Client work I can show. The rest is under NDA.
+          Client work I can show. {CASE_COUNT} have a full case study.
         </p>
 
         <div className="pstack">
           {PROJECTS.map((p, i) => {
             const side = i % 2 === 0 ? "from-left" : "from-right";
-            const Visual = (
-              <div className="pcard-visual" data-tilt style={{ background: p.grad }}>
-                {p.image ? (
-                  <>
+            const href = p.caseStudy ?? p.link.href;
+            return (
+              <article className={`pcard rv ${side}`} key={p.title} data-sp>
+                <a
+                  className="pcard-visual-link"
+                  href={href}
+                  target="_blank"
+                  rel="noopener"
+                  data-cur
+                  data-cursor-label={p.caseStudy ? "Case study" : "Visit site"}
+                  aria-label={p.caseStudy ? `Read the ${p.title} case study` : `Visit ${p.title}`}
+                >
+                  <div className="pcard-visual" data-tilt style={{ background: p.grad }}>
                     <BrowserFrame image={p.image} title={p.title} layer="bg" />
                     <BrowserFrame image={p.image} title={p.title} layer="fg" />
-                  </>
-                ) : (
-                  <div className="caseart-lg" role="img" aria-label={`${p.title} illustration`}>
-                    <svg viewBox="0 0 120 120" className="caseart-glyph-lg" aria-hidden="true">
-                      <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" strokeWidth="1.4" opacity=".5" />
-                      <circle cx="60" cy="60" r="30" fill="none" stroke="currentColor" strokeWidth="1.4" opacity=".7" />
-                      <path
-                        d="M18 60 L102 60 M60 18 L60 102 M31 31 L89 89 M89 31 L31 89"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                        opacity=".35"
-                      />
-                      {[[60, 30], [82, 48], [40, 66], [70, 84], [30, 44], [60, 60]].map(([x, y], i) => (
-                        <circle key={i} cx={x} cy={y} r={i === 5 ? 5 : 3} fill="currentColor" opacity={i === 5 ? 1 : 0.85} />
-                      ))}
-                    </svg>
+                    <span className={`pv-chip ${p.caseStudy ? "cs" : ""}`}>
+                      {p.caseStudy ? "✦ Case study" : "● Live site"}
+                    </span>
+                    <span className="pv-idx">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="pv-cta">
+                      {p.caseStudy ? "Read the case study" : "Visit the site"} →
+                    </span>
                   </div>
-                )}
-              </div>
-            );
-            return (
-              <article className={`pcard rv ${side}`} key={p.title}>
-                {p.link ? (
-                  <a
-                    className="pcard-visual-link"
-                    href={p.link.href}
-                    target="_blank"
-                    rel="noopener"
-                    data-cur
-                    aria-label={`Visit ${p.title}`}
-                  >
-                    {Visual}
-                  </a>
-                ) : (
-                  Visual
-                )}
+                </a>
                 <div className="pcard-info">
-                  {p.live ? (
+                  <div className="pcard-badges">
                     <span className="pbadge live">Live</span>
-                  ) : (
-                    <span className="pbadge">Case study</span>
-                  )}
+                    {p.caseStudy && <span className="pbadge cs">Case study</span>}
+                  </div>
                   <span className="pcat">{p.cat}</span>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>
@@ -160,20 +129,16 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    {(p.caseStudy || p.link) && (
-                      <div className="pcard-links">
-                        {p.caseStudy && (
-                          <a className="plink plink-cs" data-cur href={p.caseStudy} target="_blank" rel="noopener">
-                            Read the case study ↗
-                          </a>
-                        )}
-                        {p.link && (
-                          <a className="plink" data-cur href={p.link.href} target="_blank" rel="noopener">
-                            Visit {p.link.label} ↗
-                          </a>
-                        )}
-                      </div>
-                    )}
+                    <div className="pcard-actions">
+                      {p.caseStudy && (
+                        <a className="btn btn-p" data-cur data-mag href={p.caseStudy} target="_blank" rel="noopener">
+                          Read the case study →
+                        </a>
+                      )}
+                      <a className="btn btn-g" data-cur data-mag href={p.link.href} target="_blank" rel="noopener">
+                        Visit {p.link.label} ↗
+                      </a>
+                    </div>
                   </div>
                 </div>
               </article>

@@ -8,9 +8,10 @@ const ITEMS: Item[] = [
   { id: "about", n: "01", label: "About", hint: "who I am" },
   { id: "work", n: "02", label: "Experience", hint: "where I've worked" },
   { id: "projects", n: "03", label: "Projects", hint: "things I've built" },
-  { id: "skills", n: "04", label: "Skills", hint: "toolkit" },
-  { id: "background", n: "05", label: "Education", hint: "ANU, VIT, leadership" },
-  { id: "contact", n: "06", label: "Contact", hint: "let's talk" },
+  { id: "design", n: "04", label: "Design", hint: "palettes, type, motifs" },
+  { id: "skills", n: "05", label: "Skills", hint: "toolkit" },
+  { id: "background", n: "06", label: "Education", hint: "ANU, VIT, leadership" },
+  { id: "contact", n: "07", label: "Contact", hint: "let's talk" },
 ];
 
 function isTyping() {

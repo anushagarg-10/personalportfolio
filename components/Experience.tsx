@@ -70,14 +70,35 @@ const JOBS: Job[] = [
   },
 ];
 
+const DESIGN_ROLES = [
+  {
+    role: "Designer in Residence",
+    org: "10kdesigners",
+    when: "2022 to 2023",
+    text: "User-centred design practice.",
+  },
+  {
+    role: "UI/UX Designer",
+    org: "miurac",
+    when: "2022",
+    text: "Web and mobile UI, wireframes, prototypes, usability tests.",
+  },
+  {
+    role: "UI/UX Designer",
+    org: "Procial",
+    when: "2021",
+    text: "dApp flows and hi-fi prototypes.",
+  },
+];
+
 export default function Experience() {
   return (
     <section id="work">
       <div className="wrap">
         <div className="tag rv">02 · Experience</div>
-        <h2 className="h2 rv scramble">Where I&apos;ve worked.</h2>
+        <h2 className="h2 rv split">Where I&apos;ve <em>worked</em>.</h2>
         <p className="sub rv">Websites, SaaS and security.</p>
-        <div className="timeline">
+        <div className="timeline" data-sp="line">
           {JOBS.map((j) => (
             <div className="job rv" key={j.co}>
               <div className="jwhen">
@@ -102,6 +123,17 @@ export default function Experience() {
                   ))}
                 </ul>
               </div>
+            </div>
+          ))}
+        </div>
+        <div className="dz-head rv">Design roles</div>
+        <div className="dz-grid">
+          {DESIGN_ROLES.map((d, i) => (
+            <div className="dz rv" key={d.org} style={{ transitionDelay: `${i * 90}ms` }}>
+              <span className="dz-when mono">{d.when}</span>
+              <h4>{d.role}</h4>
+              <div className="dz-org">{d.org}</div>
+              <p>{d.text}</p>
             </div>
           ))}
         </div>

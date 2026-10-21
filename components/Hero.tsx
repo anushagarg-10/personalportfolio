@@ -1,13 +1,29 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { scrambleReveal } from "./Interactions";
 
 const HeroScene = dynamic(() => import("./three/HeroScene"), { ssr: false });
 
+type Lens = "design" | "engineering" | "fullstack";
+
+const LENSES: { key: Lens; label: string }[] = [
+  { key: "design", label: "UI/UX Designer" },
+  { key: "engineering", label: "Software Engineer" },
+  { key: "fullstack", label: "Full-Stack Developer" },
+];
+
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
+  const [lens, setLens] = useState<Lens>("fullstack");
+
+  // The lens only changes emphasis (pitch, highlights, skills order) via a
+  // data attribute on <html>, so all content stays in the page for SEO.
+  const pickLens = (k: Lens) => {
+    setLens(k);
+    document.documentElement.setAttribute("data-lens", k);
+  };
 
   useEffect(() => {
     const v = videoRef.current;
@@ -18,7 +34,8 @@ export default function Hero() {
       else v.play().catch(() => {});
     }
     if (!reduce && nameRef.current) {
-      const t = setTimeout(() => nameRef.current && scrambleReveal(nameRef.current), 150);
+      const wait = document.documentElement.getAttribute("data-loader") === "skip" ? 0 : 1150;
+      const t = setTimeout(() => nameRef.current && scrambleReveal(nameRef.current), 150 + wait);
       return () => clearTimeout(t);
     }
   }, []);
@@ -31,16 +48,37 @@ export default function Hero() {
       <div className="wrap hero3d-grid">
         <div className="hero3d-content">
           <div className="badge">
-            <span className="dotlive" /> Open to software engineering roles
+            <span className="dotlive" /> Open to UI/UX, software and full-stack roles
           </div>
           <h1 ref={nameRef}>
             Hi, I&apos;m
             <br />
             <span className="g">Anusha Garg</span>.
           </h1>
-          <p className="lead">
-            Full-stack software engineer shipping websites and SaaS platforms for 30+ businesses
-            with <b>Next.js</b>, <b>React</b> &amp; <b>TypeScript</b>.
+          <div className="lens" role="group" aria-label="Choose a lens on my work">
+            {LENSES.map((l) => (
+              <button
+                key={l.key}
+                type="button"
+                className={`lens-btn ${lens === l.key ? "on" : ""}`}
+                aria-pressed={lens === l.key}
+                onClick={() => pickLens(l.key)}
+                data-cur
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+          <p className="lead lv lv-design">
+            Designer who ships. <b>Figma</b> to production, with the design systems to match.
+          </p>
+          <p className="lead lv lv-engineering">
+            Software engineer building secure, maintainable products: SaaS, APIs and migrations for{" "}
+            <b>30+ businesses</b>.
+          </p>
+          <p className="lead lv lv-fullstack">
+            Full-stack developer shipping websites and SaaS for 30+ businesses with{" "}
+            <b>Next.js</b>, <b>React</b> &amp; <b>TypeScript</b>.
           </p>
           <div className="cta">
             <a href="#projects" className="btn btn-p" data-cur data-mag>
@@ -87,7 +125,11 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <figure className="hero3d-card" data-tilt>
+        <div className="hero3d-media">
+        <span className="sticker st-a" aria-hidden="true">Figma</span>
+        <span className="sticker st-b" aria-hidden="true">Design systems</span>
+        <span className="sticker st-c" aria-hidden="true">Next.js</span>
+        <figure className="hero3d-card" data-tilt data-cursor-label="Hi!">
           <video
             ref={videoRef}
             className="hero3d-video"
@@ -104,6 +146,7 @@ export default function Hero() {
             <span className="dotlive" /> live from Canberra
           </figcaption>
         </figure>
+        </div>
       </div>
       <div className="scrollcue">
         SCROLL<div className="l" />

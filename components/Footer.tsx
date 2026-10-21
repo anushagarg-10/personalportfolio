@@ -1,7 +1,27 @@
+import type { CSSProperties } from "react";
+
+const Letters = ({ text }: { text: string }) => (
+  <>
+    {text.split("").map((ch, i) => (
+      <span key={i} className="fb-l" style={{ ["--i" as string]: i } as CSSProperties}>
+        {ch === " " ? "\u00A0" : ch}
+      </span>
+    ))}
+  </>
+);
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
+      <div className="foot-big rv" data-sp aria-hidden="true">
+        <span className="fb-row">
+          <Letters text="Anusha" />
+        </span>
+        <span className="fb-row fb-acc">
+          <Letters text=" Garg" />
+        </span>
+      </div>
       <div className="wrap foot">
         <p>
           © {year} Anusha Garg <span className="mono foot-v">· v2, redesigned {year}</span>
